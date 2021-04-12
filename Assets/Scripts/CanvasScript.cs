@@ -12,6 +12,8 @@ public class CanvasScript : MonoBehaviour
     public TextMeshProUGUI tutorialText;
     [SerializeField]
     public Button backButton;
+    [SerializeField]
+    public TextMeshProUGUI highScoreText;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +22,7 @@ public class CanvasScript : MonoBehaviour
         tutorialText.gameObject.SetActive(false);
         backButton.gameObject.SetActive(false);
         backButton.onClick.AddListener(BackButtonClick);
+        highScoreText.text = "Highest Score: " + PlayerPrefs.GetInt("highscore", 0);
     }
 
     // Update is called once per frame

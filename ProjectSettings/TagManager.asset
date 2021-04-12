@@ -8,6 +8,7 @@ TagManager:
   - Exitgame
   - Showcreators
   - Showtutorial
+  - Apple
   layers:
   - Default
   - TransparentFX
