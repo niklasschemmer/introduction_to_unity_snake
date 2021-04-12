@@ -29,8 +29,26 @@ public class BodyPartFirst : MonoBehaviour
             AddBodyPart();
         }
 
+        var directionInput = Input.GetAxis("Horizontal");
+        if (transform.position.z > 8)
+        {
+            directionInput = (transform.rotation.eulerAngles.y > 90 && transform.rotation.eulerAngles.y < 270) ?  -1 : 1;
+        }
+        else if (transform.position.z < -5)
+        {
+            directionInput = (transform.rotation.eulerAngles.y > 90 && transform.rotation.eulerAngles.y < 270) ? 1 : -1;
+        }
+        else if (transform.position.x < (-21 + transform.position.z * 0.5))
+        {
+            directionInput = transform.rotation.eulerAngles.y > 180 ? 1 : -1;
+        }
+        else if(transform.position.x > (21 + transform.position.z * -0.5))
+        {
+            directionInput = transform.rotation.eulerAngles.y > 180 ? -1 : 1;
+        }
+
         var movementForward = Vector3.right * Time.deltaTime * 3;
-        var rotation = Vector3.up * Time.deltaTime * 100 * Input.GetAxis("Horizontal");
+        var rotation = Vector3.up * Time.deltaTime * 100 * directionInput;
 
         transform.Translate(movementForward);
         transform.Rotate(rotation);
