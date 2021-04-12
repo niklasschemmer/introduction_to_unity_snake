@@ -8,6 +8,8 @@ public class SpawnManager : MonoBehaviour
     public GameObject _grassOnePrefab;
     [SerializeField]
     public GameObject _grassTwoPrefab;
+    [SerializeField]
+    public GameObject _applePrefab;
 
     // Start is called before the first frame update
     void Start()

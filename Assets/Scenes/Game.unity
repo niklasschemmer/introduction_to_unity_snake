@@ -1525,6 +1525,7 @@ MonoBehaviour:
   _flowerOnePrefab: {fileID: 1810836374240917309, guid: 962996e23ffcbc44d92fb20cd03940cd, type: 3}
   _grassOnePrefab: {fileID: 5707813131339405077, guid: b995a96a7ca36d04b851e46870b5aadf, type: 3}
   _grassTwoPrefab: {fileID: 3637134996410867462, guid: 9c6178fe943216540b276b975dafae16, type: 3}
+  _applePrefab: {fileID: 1829371231341652, guid: 426b44a7575f71e479fab4f4e8431989, type: 3}
 --- !u!4 &805678088
 Transform:
   m_ObjectHideFlags: 0
@@ -1799,6 +1800,7 @@ MonoBehaviour:
   _flowerOnePrefab: {fileID: 3296423324020358748, guid: 96f3ee2389b469e4286ede6324576959, type: 3}
   _grassOnePrefab: {fileID: 0}
   _grassTwoPrefab: {fileID: 0}
+  _applePrefab: {fileID: 0}
 --- !u!1001 &1160942544
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2799,6 +2801,7 @@ MonoBehaviour:
   _flowerOnePrefab: {fileID: 3296423324020358748, guid: 96f3ee2389b469e4286ede6324576959, type: 3}
   _grassOnePrefab: {fileID: 0}
   _grassTwoPrefab: {fileID: 0}
+  _applePrefab: {fileID: 0}
 --- !u!1001 &1849307191
 PrefabInstance:
   m_ObjectHideFlags: 0
