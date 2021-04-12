@@ -34,7 +34,7 @@ public class BodyPartFirst : MonoBehaviour
         {
             directionInput = (transform.rotation.eulerAngles.y > 90 && transform.rotation.eulerAngles.y < 270) ?  -1 : 1;
         }
-        else if (transform.position.z < -5)
+        else if (transform.position.z < -6)
         {
             directionInput = (transform.rotation.eulerAngles.y > 90 && transform.rotation.eulerAngles.y < 270) ? 1 : -1;
         }

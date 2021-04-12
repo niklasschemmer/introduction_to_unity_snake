@@ -21,16 +21,19 @@ public class BodyPart : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.SetPositionAndRotation(_actPosition.Item1, _actPosition.Item2);
-        if (_queueLength > 25)
+        if (_actPosition != null)
         {
-            if (_lastBodyPart != null)
-                _lastBodyPart.PushPositionToQueue(_upcomingPositions.Dequeue());
-            else if (_behindBodyPart != null)
-                _behindBodyPart.PushPositionToQueue(_upcomingPositions.Dequeue());
-            else
-                _upcomingPositions.Dequeue();
-            _queueLength--;
+            transform.SetPositionAndRotation(_actPosition.Item1, _actPosition.Item2);
+            if (_queueLength > 20)
+            {
+                if (_lastBodyPart != null)
+                    _lastBodyPart.PushPositionToQueue(_upcomingPositions.Dequeue());
+                else if (_behindBodyPart != null)
+                    _behindBodyPart.PushPositionToQueue(_upcomingPositions.Dequeue());
+                else
+                    _upcomingPositions.Dequeue();
+                _queueLength--;
+            }
         }
     }
 

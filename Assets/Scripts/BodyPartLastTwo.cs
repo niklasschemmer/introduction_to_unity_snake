@@ -23,14 +23,17 @@ public class BodyPartLastTwo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.SetPositionAndRotation(_actPosition.Item1, _actPosition.Item2);
-        if (_queueLength > 25)
+        if (_actPosition != null)
         {
-            if (_bodyPartLastThree != null)
-                _bodyPartLastThree.PushPositionToQueue(_upcomingPositions.Dequeue());
-            else
-                _upcomingPositions.Dequeue();
-            _queueLength--;
+            transform.SetPositionAndRotation(_actPosition.Item1, _actPosition.Item2);
+            if (_queueLength > 15)
+            {
+                if (_bodyPartLastThree != null)
+                    _bodyPartLastThree.PushPositionToQueue(_upcomingPositions.Dequeue());
+                else
+                    _upcomingPositions.Dequeue();
+                _queueLength--;
+            }
         }
     }
 

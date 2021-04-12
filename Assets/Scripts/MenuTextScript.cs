@@ -8,6 +8,8 @@ public class MenuTextScript : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 {
     [SerializeField]
     public TextMeshProUGUI text;
+    [SerializeField]
+    public CanvasScript menuCanvas;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +32,14 @@ public class MenuTextScript : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         else if (CompareTag("Exitgame"))
         {
             Application.Quit();
+        }
+        else if (CompareTag("Showcreators"))
+        {
+            menuCanvas.ShowCreators(true);
+        }
+        else if (CompareTag("Showtutorial"))
+        {
+            menuCanvas.ShowTutorial(true);
         }
     }
 

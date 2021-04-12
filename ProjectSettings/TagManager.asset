@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Startgame
   - Exitgame
+  - Showcreators
+  - Showtutorial
   layers:
   - Default
   - TransparentFX
